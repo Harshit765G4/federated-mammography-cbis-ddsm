@@ -1,0 +1,27 @@
+# Raw and processed data - never commit
+data/
+processed/
+raw/
+*.dcm
+*.png
+*.jpg
+
+# Model weights - large binary files
+outputs/weights*/
+*.pt
+*.pth
+
+# Kaggle mirror data (old C:\Breast_Cancer project, if pushing from there too)
+images_clahe/
+images/
+qa_preview/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS junk
+.DS_Store
+Thumbs.db
