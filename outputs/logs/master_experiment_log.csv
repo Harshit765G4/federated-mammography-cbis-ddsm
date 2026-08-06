@@ -1,0 +1,5 @@
+run_id,algorithm,iid_setting,epsilon,seed,n_clients,local_epochs,n_rounds,accuracy,auc,sensitivity,specificity,n_test,accuracy_ci_low,accuracy_ci_high,training_time_sec_per_round,communication_time_sec_per_round,cumulative_bandwidth_gb,notes
+fedavg_iid_r1,FedAvg,IID,,42,3,2,15,0.7483,0.8229,0.6351,0.863,441,,,236.8,,,BN buffer fix + class weight cap + grad clip + LR decay applied
+fedavg_noniid_r1,FedAvg,non-IID,,42,3,2,15,0.644,0.7202,0.4595,0.8311,441,,,237.0,,,"Dirichlet alpha=0.5, same fixes as IID run"
+fedavg_iid_r1,FedAvg,IID,,42,3,2,15,0.7483,0.8229,0.6351,0.863,441,,,236.8,,,BN buffer fix + class weight cap + grad clip + LR decay applied
+fedavg_noniid_r1,FedAvg,non-IID,,42,3,2,15,0.644,0.7202,0.4595,0.8311,441,,,237.0,,,"Dirichlet alpha=0.5, same fixes as IID run"

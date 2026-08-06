@@ -1,0 +1,107 @@
+PS D:\Breast_Cancer_DICOM> python D:\Breast_Cancer_DICOM\wilson_ci.py
+
+============================================================
+FIXED THRESHOLD 0.5 (primary)
+============================================================
+Accuracy: 0.6897 ± 0.0712 (fold std)
+  Fold 0: acc=0.7333, auc=0.8322, sens=0.5273, spec=0.9304
+  Fold 1: acc=0.7806, auc=0.8601, sens=0.7939, spec=0.7642
+  Fold 2: acc=0.6778, auc=0.7172, sens=0.6729, spec=0.6818
+  Fold 3: acc=0.5932, auc=0.8004, sens=0.2479, spec=0.9565
+  Fold 4: acc=0.6636, auc=0.7583, sens=0.7377, spec=0.5714
+
+Pooled summary:
+  Accuracy:    0.6897 ± 0.0712
+  AUC:         0.7936 ± 0.0571
+  Sensitivity: 0.5959 ± 0.2185
+  Specificity: 0.7809 ± 0.1637
+
+============================================================
+CALIBRATION-DERIVED THRESHOLD (secondary)
+============================================================
+Accuracy: 0.7186 ± 0.0501 (fold std)
+  Fold 0: acc=0.7378, auc=0.8322, sens=0.7273, spec=0.7478
+  Fold 1: acc=0.7890, auc=0.8601, sens=0.7557, spec=0.8302
+  Fold 2: acc=0.6778, auc=0.7172, sens=0.6636, spec=0.6894
+  Fold 3: acc=0.7246, auc=0.8004, sens=0.6198, spec=0.8348
+  Fold 4: acc=0.6636, auc=0.7583, sens=0.7869, spec=0.5102
+
+Pooled summary:
+  Accuracy:    0.7186 ± 0.0501
+  AUC:         0.7936 ± 0.0571
+  Sensitivity: 0.7107 ± 0.0682
+  Specificity: 0.7225 ± 0.1332
+PS D:\Breast_Cancer_DICOM> 
+
+
+
+PS D:\Breast_Cancer_DICOM> python D:\Breast_Cancer_DICOM\experiment_log_schema.py
+
+Created: D:\Breast_Cancer_DICOM\outputs\logs\master_experiment_log.csv
+PS D:\Breast_Cancer_DICOM> 
+
+
+
+
+
+
+
+PS D:\Breast_Cancer_DICOM> python D:\Breast_Cancer_DICOM\fedavg_manual.py
+
+============================================================
+FEDAVG - iid
+============================================================
+Round 1: acc=0.4966, auc=0.6500, sens=0.0000, spec=1.0000, train_time=235.7s
+Round 2: acc=0.5533, auc=0.7234, sens=0.1261, spec=0.9863, train_time=238.9s
+Round 3: acc=0.6236, auc=0.7432, sens=0.3198, spec=0.9315, train_time=237.5s
+Round 4: acc=0.6054, auc=0.7425, sens=0.2568, spec=0.9589, train_time=237.3s
+Round 5: acc=0.6259, auc=0.7452, sens=0.3198, spec=0.9361, train_time=236.9s
+Round 6: acc=0.6100, auc=0.7533, sens=0.2838, spec=0.9406, train_time=236.5s
+Round 7: acc=0.6304, auc=0.7720, sens=0.3153, spec=0.9498, train_time=236.7s
+Round 8: acc=0.6009, auc=0.7523, sens=0.2342, spec=0.9726, train_time=237.1s
+Round 9: acc=0.5986, auc=0.7451, sens=0.2658, spec=0.9361, train_time=236.0s
+Round 10: acc=0.6961, auc=0.7321, sens=0.7883, spec=0.6027, train_time=236.1s
+Round 11: acc=0.6236, auc=0.7324, sens=0.3378, spec=0.9132, train_time=236.4s
+Round 12: acc=0.6939, auc=0.7265, sens=0.7703, spec=0.6164, train_time=236.1s
+Round 13: acc=0.5193, auc=0.5555, sens=0.9865, spec=0.0457, train_time=236.3s
+Round 14: acc=0.5034, auc=0.5000, sens=1.0000, spec=0.0000, train_time=236.6s
+Round 15: acc=0.5034, auc=0.5068, sens=1.0000, spec=0.0000, train_time=236.1s
+
+FINAL (iid): acc=0.5034, auc=0.5068, sens=1.0000, spec=0.0000
+
+============================================================
+FEDAVG - noniid
+============================================================
+Round 1: acc=0.5193, auc=0.6121, sens=0.9505, spec=0.0822, train_time=236.6s
+Round 2: acc=0.5034, auc=0.5994, sens=1.0000, spec=0.0000, train_time=236.0s
+Round 3: acc=0.5034, auc=0.5000, sens=1.0000, spec=0.0000, train_time=236.2s
+Round 4: acc=0.5533, auc=0.5632, sens=0.6937, spec=0.4110, train_time=236.4s
+Round 5: acc=0.5034, auc=0.5000, sens=1.0000, spec=0.0000, train_time=236.2s
+Round 6: acc=0.5034, auc=0.5000, sens=1.0000, spec=0.0000, train_time=237.2s
+Round 7: acc=0.5034, auc=0.5000, sens=1.0000, spec=0.0000, train_time=237.7s
+Round 8: acc=0.5034, auc=0.5000, sens=1.0000, spec=0.0000, train_time=236.5s
+Round 9: acc=0.5034, auc=0.5000, sens=1.0000, spec=0.0000, train_time=236.6s
+Round 10: acc=0.5034, auc=0.5000, sens=1.0000, spec=0.0000, train_time=242.9s
+Round 11: acc=0.5034, auc=0.5000, sens=1.0000, spec=0.0000, train_time=241.6s
+Round 12: acc=0.5034, auc=0.5000, sens=1.0000, spec=0.0000, train_time=237.0s
+Round 13: acc=0.5102, auc=0.5070, sens=0.9865, spec=0.0274, train_time=236.4s
+Round 14: acc=0.5034, auc=0.5000, sens=1.0000, spec=0.0000, train_time=236.3s
+Round 15: acc=0.5034, auc=0.5000, sens=1.0000, spec=0.0000, train_time=236.0s
+
+FINAL (noniid): acc=0.5034, auc=0.5000, sens=1.0000, spec=0.0000
+
+============================================================
+SUMMARY
+============================================================
+FedAvg IID:     acc=0.5034, auc=0.5068
+FedAvg non-IID: acc=0.5034, auc=0.5000
+
+Compare to your centralized baseline: acc≈0.69, auc≈0.79
+PS D:\Breast_Cancer_DICOM> 
+
+
+
+
+
+
+
